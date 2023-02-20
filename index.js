@@ -31,15 +31,16 @@ const postReq = async (type) => {
 };
 
 app.use((req, res, next) => {
-  const CURRENT_URL = [
-    "http://localhost:3005",
-    "https://rasa03.github.io/GenesisTest/",
-  ];
-  const ACAO = req.headers.origin;
+  res.setHeader("Access-Control-Allow-Origin", "*");
 
-  if (CURRENT_URL.includes(ACAO)) {
-    res.setHeader("Access-Control-Allow-Origin", ACAO);
-  }
+  // const CURRENT_URL = [
+  //   "http://localhost:3005",
+  //   "https://rasa03.github.io/GenesisTest",
+  // ];
+  // const ACAO = req.headers.origin;
+
+  // if (CURRENT_URL.includes(ACAO)) {
+  // }
   res.setHeader(
     "Access-Control-Allow-Methods",
     "GET, POST, OPTIONS, PUT, PATCH, DELETE"
