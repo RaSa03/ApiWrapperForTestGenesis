@@ -31,7 +31,7 @@ const postReq = async (type) => {
 };
 
 app.use((req, res, next) => {
-  const CURRENT_URL = ["http://localhost:3005"];
+  const CURRENT_URL = ["http://localhost:3005", "https://rasa03.github.io"];
   const ACAO = req.headers.origin;
 
   if (CURRENT_URL.includes(ACAO)) {
